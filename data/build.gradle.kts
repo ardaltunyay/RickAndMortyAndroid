@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     kotlin("android")
     kotlin("kapt")
     id("dagger.hilt.android.plugin")
@@ -9,16 +9,11 @@ android {
     compileSdk = Configs.compileSdk
 
     defaultConfig {
-        applicationId = Configs.applicationId
         minSdk = Configs.minSdk
         targetSdk = Configs.targetSdk
-        versionCode = Configs.versionCode
-        versionName = Configs.versionName
 
         testInstrumentationRunner = Configs.testInstrumentationRunner
-        vectorDrawables {
-            useSupportLibrary = Configs.useSupportLibrary
-        }
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -36,30 +31,18 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = Versions.composeVersion
-    }
-    packagingOptions {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
 }
 
 dependencies {
-    implementation(project(":ui"))
-    implementation(project(":data"))
     implementation(project(":domain"))
-    implementation(Dependencies.navigationCompose)
+
+    implementation(Dependencies.coreKtx)
+    implementation(Dependencies.appCompat)
+    testApi(Dependencies.jUnit)
+    androidTestApi(Dependencies.jUnitExt)
+    androidTestApi(Dependencies.espressoCore)
+
     implementation(Dependencies.hilt)
     kapt(Dependencies.hiltCompiler)
 
-}
-
-// Allow references to generated code
-kapt {
-    correctErrorTypes = true
 }

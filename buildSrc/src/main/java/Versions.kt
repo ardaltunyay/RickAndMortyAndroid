@@ -9,4 +9,6 @@ object Versions {
     const val jUnitExtVersion = "1.1.3"
     const val espressoCoreVersion = "3.4.0"
     const val navVersion = "2.4.0-rc01"
+    const val hiltVersion = "2.38.1"
+    const val javaxInjectVersion = "1"
 }

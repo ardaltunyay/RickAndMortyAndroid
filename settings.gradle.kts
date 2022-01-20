@@ -7,3 +7,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Rick and Morty"
 include(":app", ":ui")
+include(":domain")
+include(":data")

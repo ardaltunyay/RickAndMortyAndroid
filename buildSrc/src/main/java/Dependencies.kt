@@ -13,4 +13,7 @@ object Dependencies {
     const val composeUiJUnit = "androidx.compose.ui:ui-test-junit4:${Versions.composeVersion}"
     const val composeUiTooling = "androidx.compose.ui:ui-tooling:${Versions.composeVersion}"
     const val navigationCompose = "androidx.navigation:navigation-compose:${Versions.navVersion}"
+    const val hilt = "com.google.dagger:hilt-android:${Versions.hiltVersion}"
+    const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hiltVersion}"
+    const val javaxInject = "javax.inject:javax.inject:${Versions.javaxInjectVersion}"
 }
