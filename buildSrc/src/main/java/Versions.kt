@@ -11,4 +11,7 @@ object Versions {
     const val navVersion = "2.4.0-rc01"
     const val hiltVersion = "2.38.1"
     const val javaxInjectVersion = "1"
+    const val retrofitVersion = "2.9.0"
+    const val okHttpVersion = "4.9.3"
+
 }

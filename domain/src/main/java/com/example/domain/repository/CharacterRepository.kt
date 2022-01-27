@@ -6,4 +6,6 @@ interface CharacterRepository {
 
     fun getSingleCharacter(): Character
 
+    fun getAllCharacters()
+
 }

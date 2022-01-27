@@ -57,6 +57,13 @@ dependencies {
     implementation(Dependencies.hilt)
     kapt(Dependencies.hiltCompiler)
 
+    implementation(platform(Dependencies.okHttpBom))
+    implementation(Dependencies.okHttp)
+    implementation(Dependencies.okHttpLoggingInterceptor)
+
+    implementation(Dependencies.retrofit)
+    implementation(Dependencies.retrofitConverterMoshi)
+
 }
 
 // Allow references to generated code
